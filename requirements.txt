@@ -1,0 +1,4 @@
+1. SKSE VR 2.0.12 https://skse.silverlock.org/
+2. UIExtensions 1.2.0 https://www.nexusmods.com/skyrimspecialedition/mods/17561
+3. SkyUI VR 1.2.1 https://github.com/Odie/skyui-vr/releases/
+4. JContainers VR 4.1.13 https://www.nexusmods.com/skyrimspecialedition/mods/16495
