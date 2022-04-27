@@ -1,0 +1,9 @@
+{
+  "block": 2,
+  "isBetweenTrialRest": 1,
+  "isPostTrial": 1,
+  "isPreTrial": 1,
+  "RestDuration": 5,
+  "session": 1,
+  "trial": 1
+}
