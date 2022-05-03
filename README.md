@@ -4,7 +4,7 @@
 
   <p align="center">
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the wiki »</strong></a>
+    <a href="https://github.com/ZeminL/SkyBXF/wiki"><strong>Explore the wiki »</strong></a>
     <br />
   </p>
 </div>
@@ -17,10 +17,6 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
@@ -30,10 +26,7 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -42,7 +35,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+![image](https://user-images.githubusercontent.com/104492587/166397659-d736663c-e449-4119-bfa0-797b4247c035.png)
 
 SkyBXF is designed to help researchers develop virtual reality behavioral studies using The Elder Scrolls V: Skyrim VR (SkyrimVR), requiring only minimal programming skills to operate. 
 <br />
@@ -53,7 +46,7 @@ At the same time, researchers with more advanced coding skills and who wish to d
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is a simple example of how to set up a project locally. A detailed step-by-step tutorial for getting a local copy up and running can be found on [the wiki.](https://example.com)
+This is a simple example of how to set up a project locally. A detailed step-by-step tutorial for getting a local copy up and running can be found on [the wiki.](https://github.com/ZeminL/SkyBXF/wiki)
 ### Prerequisites
 
 Please install the required software and mods before installing SkyBXF.
@@ -65,7 +58,7 @@ Please install the required software and mods before installing SkyBXF.
 
 ### Installation
 
-SkyBXF installation package is available at [release]()
+SkyBXF installation package is available at [release](https://github.com/ZeminL/SkyBXF/release)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -75,7 +68,7 @@ SkyBXF installation package is available at [release]()
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-_For more examples, please refer to the [wiki](https://example.com)_
+_For more examples, please refer to the [wiki](https://github.com/ZeminL/SkyBXF/wiki)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -84,12 +77,12 @@ _For more examples, please refer to the [wiki](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [] Feature 1
-- [] Feature 2
-- [] Feature 3
-    - [] Nested Feature
-
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+- Graphical User Interface
+- ![image](https://user-images.githubusercontent.com/104492587/166397659-d736663c-e449-4119-bfa0-797b4247c035.png)
+- Questionnaire Implementation
+- ![image](https://user-images.githubusercontent.com/104492587/166398504-f9d9a017-1aca-465a-af55-f15810687025.png)
+- Data Merge
+- ![image](https://user-images.githubusercontent.com/104492587/166398534-6a790d7e-2352-4b78-a78e-6838fca05b99.png)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
