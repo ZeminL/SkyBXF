@@ -91,8 +91,6 @@ _For more examples, please refer to the [wiki](https://github.com/ZeminL/SkyBXF/
 
 Ze-Min Liu - email@iszemin.liu@gmail.com
 
-Project Link: [https://github.com/ZeminL/SkyBXF](https://github.com/ZeminL/SkyBXF)
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
