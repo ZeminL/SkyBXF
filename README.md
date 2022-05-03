@@ -50,23 +50,6 @@ At the same time, researchers with more advanced coding skills and who wish to d
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-### Built With
-
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
@@ -113,9 +96,9 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 <!-- CONTACT -->
 ## Contact
 
-Ze-Min Liu - email@email_client.com
+Ze-Min Liu - email@iszemin.liu@gmail.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/ZeminL/SkyBXF](https://github.com/ZeminL/SkyBXF)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
