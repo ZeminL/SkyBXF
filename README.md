@@ -39,7 +39,7 @@
 
 SkyBXF is designed to help researchers develop virtual reality behavioral studies using The Elder Scrolls V: Skyrim VR (SkyrimVR), requiring only minimal programming skills to operate. 
 <br />
-At the same time, researchers with more advanced coding skills and who wish to develop further can investigate the additional online resources available from SkyrimVR's community. As well as learn to master the Creation Kit to create custom scenes, NPCs, scripts and more directly.
+At the same time, researchers with more advanced coding skills and who wish to develop further can investigate the additional online resources available from [SkyrimVR's community](https://www.nexusmods.com/skyrimspecialedition/mods/categories/108/). As well as learn to master the [Creation Kit](https://www.creationkit.com/) to create custom scenes, NPCs, scripts and more directly.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -58,7 +58,7 @@ Please install the required software and mods before installing SkyBXF.
 
 ### Installation
 
-SkyBXF installation package is available at [release](https://github.com/ZeminL/SkyBXF/release)
+SkyBXF installation package is available at [releases](https://github.com/ZeminL/SkyBXF/releases)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
