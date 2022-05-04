@@ -25,7 +25,7 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#Features">Features</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -74,8 +74,8 @@ _For more examples, please refer to the [wiki](https://github.com/ZeminL/SkyBXF/
 
 
 
-<!-- ROADMAP -->
-## Roadmap
+<!-- Features -->
+## Features
 
 - Graphical User Interface
 - ![image](https://user-images.githubusercontent.com/104492587/166397659-d736663c-e449-4119-bfa0-797b4247c035.png)
