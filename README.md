@@ -88,8 +88,9 @@ _For more examples, please refer to the [wiki](https://github.com/ZeminL/SkyBXF/
 
 <!--  Future projects/implementations in progress -->
 ## Future projects/implementations in progress
--Recording and exporting reaction times of button presses.
--Triggering trial ends by either a time limit and/or collecting an item.
+
+- Recording and exporting reaction times of button presses.
+- Triggering trial ends by either a time limit and/or collecting an item.
 
 <!-- CONTACT -->
 ## Contact
