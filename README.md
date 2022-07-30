@@ -85,6 +85,9 @@ _For more examples, please refer to the [wiki](https://github.com/ZeminL/SkyBXF/
 - ![image](https://user-images.githubusercontent.com/104492587/166398534-6a790d7e-2352-4b78-a78e-6838fca05b99.png)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+<!--  Future projects/implementations in progress -->
+-Recording and exporting reaction times of button presses.
+-Triggering trial ends by either a time limit and/or collecting an item.
 
 <!-- CONTACT -->
 ## Contact
