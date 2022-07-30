@@ -94,6 +94,7 @@ _For more examples, please refer to the [wiki](https://github.com/ZeminL/SkyBXF/
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+
 <!-- CONTACT -->
 ## Contact
 
@@ -101,4 +102,4 @@ Ze-Min Liu - email@iszemin.liu@gmail.com
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
+**THIS MATERIAL IS NOT MADE, GUARANTEED OR SUPPORTED BY ZENIMAX OR ITS AFFILIATES.**
