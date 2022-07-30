@@ -102,4 +102,6 @@ Ze-Min Liu - email@iszemin.liu@gmail.com
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+
+**By agreeing to use SkyBXF, you acknowledge and agree to the terms stated in both SkyrimVR EULA and Creation Kit EULA.**
 **THIS MATERIAL IS NOT MADE, GUARANTEED OR SUPPORTED BY ZENIMAX OR ITS AFFILIATES.**
