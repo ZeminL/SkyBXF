@@ -1,0 +1,14 @@
+{
+  "Block": 1,
+  "Break time between trials": 0,
+  "DATA": [
+    "ID,Session,Block,Trial,Design,1,RT,2,RT,3,RT,4,RT,5,RT,6,RT,7,RT,8,RT,9,RT,10,RT,11,RT,12,RT,13,RT,14,RT,15,RT,16,RT",
+    "7,1,1,1,pre",
+    "7,1,1,1,post"
+  ],
+  "Gender": "male",
+  "Handedness": "Left",
+  "id": 7,
+  "session": 1,
+  "trial": 1
+}

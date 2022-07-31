@@ -1,0 +1,13 @@
+D:\VS Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+D:\VS Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+D:\VS Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\VS Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\VS Project\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.dll
+D:\VS Project\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.xml
+D:\VS Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+D:\VS Project\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\VRFrame_DataMerge.exe.config
+D:\VS Project\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\VRFrame_DataMerge.exe
+D:\VS Project\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\VRFrame_DataMerge.pdb
+D:\VS Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\VRFrame_DataMerge.Properties.Resources.resources
+D:\VS Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\VRFrame_DataMerge.exe
+D:\VS Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\VRFrame_DataMerge.pdb
