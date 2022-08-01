@@ -37,12 +37,13 @@ Int Property content Auto
 Int Property contentPart Auto
 
 Int Property a_flags = 0 Auto
+Int Property TimeLimit = 60 Auto
 
 Bool Property isPreTrial = true Auto
 Bool Property isPostTrial =true Auto
 Bool Property isBetweenTrialRest =true Auto
 Bool Property isReach Auto
-
+Bool Property isTimeLimit = false Auto
 
 string Property queName Auto
 Int Property queCount Auto
@@ -111,13 +112,27 @@ Function StartBlock(message ms_sleep)
 				JArray.setStr(resultData,1,output)
 
 			endif
-			isReach = false
-			while (!isReach)
-				Utility.Wait(0.5)
-				if (Game.GetPlayer().GetDistance(EndMarker)<500)
-					isReach = true
-				endif
-			endwhile
+			if (isTimeLimit)
+				int t = TimeLimit
+				while (t >= 1)
+					Utility.Wait(1)
+					
+					if (t <= 10)
+						Debug.Notification(t as string)
+
+					endif
+					t = t - 1
+				endwhile
+				;Utility.Wait(TimeLimit)
+			else
+				isReach = false
+				while (!isReach)
+					Utility.Wait(0.5)
+					if (Game.GetPlayer().GetDistance(EndMarker)<500)
+						isReach = true
+					endif
+				endwhile
+			endif
 		
 			if (isPostTrial)
 				output = ShowQuestionnaire(tmp+","+"post",ms_post)
@@ -148,9 +163,7 @@ endFunction
 string Function ShowQuestionnaire(string curTrialData, Message ms)
     content = JDB.solveObj(".queData.content")
 
-
 	content = JMap.getObj(queData,"content")
-
 
 	int contN = JArray.count(content)
 	int i = 0

@@ -43,6 +43,11 @@ int 	_startOID
 int 	_setSMOID
 int 	_setEMOID
 
+int 	_endTimeOID
+int 	_endPosOID
+int 	_TimeLimitOID
+; State
+
 string 		_startMarker 	= "None"
 string 		_EndMarker 	= "None"
 
@@ -51,6 +56,49 @@ int function GetVersion()
 	return 1
 endFunction
 
+function Startfunc()
+	MainScript.queData = JValue.readFromFile(JContainers.userDirectory() + "Questionnaire.json")
+	JDB.SetObj("queData", MainScript.queData)
+	MainScript.resultData = JArray.object()
+	MainScript.result = JMap.object()
+	JMap.setInt(MainScript.result,"ID",MainScript.id as int)
+	JMap.setStr(MainScript.result,"Gender",_gender[_curGender])
+	JMap.setStr(MainScript.result,"Handedness",_hand[_curHand])
+	JMap.setInt(MainScript.result,"Session",MainScript.session as int)
+	JMap.setInt(MainScript.result,"Block",MainScript.block)
+	JMap.setInt(MainScript.result,"Trial",MainScript.trial)
+	JMap.setInt(MainScript.result,"Duration of rest between trials",MainScript.sleep)
+	JValue.writeToFile(MainScript.result, JContainers.userDirectory()+"Result/"+"Participant_"+(MainScript.id as int) as string+"/"+"ParticipantInfo.json")
+	string Header = "ID,Session,Block,Trial,Design"
+	int n = 1
+	while (n <= MainScript.queCount)		
+		Header += "," 
+		Header += n as string
+		Header += ",RT" 				
+		n += 1
+	endwhile
+	JArray.addStr(MainScript.resultData,Header)
+	if (MainScript.isPreTrial)
+		JArray.addStr(MainScript.resultData,(MainScript.id as int) as string+","+(MainScript.session as int) as string+","+MainScript.block as string+","+ MainScript.trial as string +","+ "pre")	
+	endif
+	if (MainScript.isPostTrial)
+		JArray.addStr(MainScript.resultData,(MainScript.id as int) as string+","+(MainScript.session as int) as string+","+MainScript.block as string+","+ MainScript.trial as string +","+ "post")
+	endif
+	JMap.setObj(MainScript.result,"Data",MainScript.resultData)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+	JDB.setObj("Result",MainScript.result)	
+	MainScript.config = JValue.readFromFile(JContainers.userDirectory() + "config.json")
+	JMap.setInt(MainScript.config,"isPreTrial",MainScript.isPreTrial as int)
+	JMap.setInt(MainScript.config,"isPostTrial",MainScript.isPostTrial as int)
+	JMap.setInt(MainScript.config,"isBetweenTrialRest",MainScript.isBetweenTrialRest as int)
+	JMap.setInt(MainScript.config,"RestDuration",MainScript.sleep)
+	JMap.setInt(MainScript.config,"trial",MainScript.trial)
+	JMap.setInt(MainScript.config,"block",MainScript.block)
+	JMap.setInt(MainScript.config,"session",MainScript.session as int)
+	JValue.writeToFile(MainScript.config, JContainers.userDirectory() + "config.json")
+	Game.GetPlayer().MoveTo(MainScript.StartMarker)
+	Utility.Wait(1)
+	MainScript.StartBlock(MainScript.ms_sleep)
+endFunction
 bool function GetFile()
 	MainScript.queData = JValue.readFromFile(JContainers.userDirectory() + "Questionnaire.json")
 	if (MainScript.queData == 0)
@@ -88,7 +136,6 @@ endEvent
 ; @overrides SKI_ConfigBase
 event OnConfigInit()
 	MainScript =SkyBXFMain as SkyBXFQuestScript
-	
 
 
 	Pages = new string[2]
@@ -128,6 +175,11 @@ event OnPageReset(string a_page)
 		_genderMenuOID = AddMenuOption("Gender", _gender[_curGender])
 		_handOID_H = AddMenuOption("handedness", _hand[_curHand])
 
+		AddHeaderOption("End Conditions")
+
+		_endTimeOID = AddToggleOption("Set the time limit",MainScript.isTimeLimit)
+		_endPosOID = AddToggleOption("Set the end position",MainScript.isTimeLimit == false)
+		_TimeLimitOID = AddSliderOption("Time limit duration", MainScript.TimeLimit as float," {0} seconds")
 		SetCursorPosition(1)
 
 		AddHeaderOption("Experiment Option")
@@ -164,58 +216,27 @@ endEvent
 
 event OnOptionSelect(int a_option)
 	if (a_option == _startOID)
-		MainScript.queData = JValue.readFromFile(JContainers.userDirectory() + "Questionnaire.json")
-		JDB.SetObj("queData", MainScript.queData)
-
-		MainScript.resultData = JArray.object()
-		MainScript.result = JMap.object()
-
-		JMap.setInt(MainScript.result,"ID",MainScript.id as int)
-		JMap.setStr(MainScript.result,"Gender",_gender[_curGender])
-		JMap.setStr(MainScript.result,"Handedness",_hand[_curHand])
-		JMap.setInt(MainScript.result,"Session",MainScript.session as int)
-		JMap.setInt(MainScript.result,"Block",MainScript.block)
-		JMap.setInt(MainScript.result,"Trial",MainScript.trial)
-		JMap.setInt(MainScript.result,"Duration of rest between trials",MainScript.sleep)
-		JValue.writeToFile(MainScript.result, JContainers.userDirectory()+"Result/"+"Participant_"+(MainScript.id as int) as string+"/"+"ParticipantInfo.json")
-
-		string Header = "ID,Session,Block,Trial,Design"
-		int n = 1
-		while (n <= MainScript.queCount)		
-			Header += "," 
-			Header += n as string
-			Header += ",RT" 				
-			n += 1
-		endwhile
-		JArray.addStr(MainScript.resultData,Header)
-
-		if (MainScript.isPreTrial)
-			JArray.addStr(MainScript.resultData,(MainScript.id as int) as string+","+(MainScript.session as int) as string+","+MainScript.block as string+","+ MainScript.trial as string +","+ "pre")	
-		endif
-		if (MainScript.isPostTrial)
-			JArray.addStr(MainScript.resultData,(MainScript.id as int) as string+","+(MainScript.session as int) as string+","+MainScript.block as string+","+ MainScript.trial as string +","+ "post")
-		endif
-
-		
-		JMap.setObj(MainScript.result,"Data",MainScript.resultData)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
-		JDB.setObj("Result",MainScript.result)
-		
-		MainScript.config = JValue.readFromFile(JContainers.userDirectory() + "config.json")
-
-		JMap.setInt(MainScript.config,"isPreTrial",MainScript.isPreTrial as int)
-		JMap.setInt(MainScript.config,"isPostTrial",MainScript.isPostTrial as int)
-		JMap.setInt(MainScript.config,"isBetweenTrialRest",MainScript.isBetweenTrialRest as int)
-		JMap.setInt(MainScript.config,"RestDuration",MainScript.sleep)
-		JMap.setInt(MainScript.config,"trial",MainScript.trial)
-		JMap.setInt(MainScript.config,"block",MainScript.block)
-		JMap.setInt(MainScript.config,"session",MainScript.session as int)
-		JValue.writeToFile(MainScript.config, JContainers.userDirectory() + "config.json")
-
-		
-		Game.GetPlayer().MoveTo(MainScript.StartMarker)
-		Utility.Wait(1)
-		MainScript.StartBlock(MainScript.ms_sleep)
-
+		if (MainScript.StartMarker == None)
+			Debug.MessageBox("Please set the start position!")
+		else
+			if (MainScript.isTimeLimit == false)
+				if (MainScript.EndMarker == None)
+					Debug.MessageBox("Please set the end position!")
+				else
+					Startfunc()
+				endif
+			else
+				Startfunc()
+			endif
+		endif				
+	elseIf (a_option ==_endTimeOID)
+		MainScript.isTimeLimit = true
+		SetToggleOptionValue(_endTimeOID, MainScript.isTimeLimit)
+		SetToggleOptionValue(_endPosOID, MainScript.isTimeLimit == false)
+	elseIf (a_option ==_endPosOID)
+		MainScript.isTimeLimit = false
+		SetToggleOptionValue(_endTimeOID, MainScript.isTimeLimit)
+		SetToggleOptionValue(_endPosOID, MainScript.isTimeLimit == false)
 	elseIf (a_option ==_pretestOID)
 		MainScript.isPreTrial = !MainScript.isPreTrial
 		SetToggleOptionValue(a_option, MainScript.isPreTrial)
@@ -279,7 +300,12 @@ event OnOptionSliderOpen(int a_option)
 		SetSliderDialogStartValue(MainScript.id)
 		SetSliderDialogDefaultValue(1)
 		SetSliderDialogRange(1, 100)
-		SetSliderDialogInterval(1)
+		SetSliderDialogInterval(1)		
+	elseif (a_option == _TimeLimitOID)
+		SetSliderDialogStartValue(MainScript.TimeLimit as float)
+		SetSliderDialogDefaultValue(10)
+		SetSliderDialogRange(10, 600)
+		SetSliderDialogInterval(10)
 	elseif (a_option == _ageOID)
 		SetSliderDialogStartValue(MainScript.age)
 		SetSliderDialogDefaultValue(18)
@@ -318,6 +344,9 @@ event OnOptionSliderAccept(int a_option, float a_value)
 	if (a_option == _IDinputOID)
 		MainScript.id = a_value
 		SetSliderOptionValue(a_option, a_value, "NO. {0}")
+	elseif (a_option == _TimeLimitOID)
+		MainScript.TimeLimit = a_value as int
+		SetSliderOptionValue(a_option, a_value, " {0} seconds")	
 	elseif (a_option == _ageOID)
 		MainScript.age = a_value
 		SetSliderOptionValue(a_option, a_value, " {0} years old")
