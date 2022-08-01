@@ -35,7 +35,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![image](https://user-images.githubusercontent.com/104492587/166397659-d736663c-e449-4119-bfa0-797b4247c035.png)
+![GUI](https://user-images.githubusercontent.com/104492587/182148260-dc75965e-d387-4eaf-8841-eca6450fe6f9.png)
 
 SkyBXF is designed to help researchers develop virtual reality behavioral studies using The Elder Scrolls V: Skyrim VR (SkyrimVR), requiring only minimal programming skills to operate. 
 <br />
