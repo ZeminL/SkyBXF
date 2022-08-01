@@ -78,7 +78,8 @@ _For more examples, please refer to the [wiki](https://github.com/ZeminL/SkyBXF/
 ## Features
 
 - Graphical User Interface
-- - Questionnaire Implementation
+- ![GUI](https://user-images.githubusercontent.com/104492587/182148260-dc75965e-d387-4eaf-8841-eca6450fe6f9.png)
+- Questionnaire Implementation
 - ![image](https://user-images.githubusercontent.com/104492587/166398504-f9d9a017-1aca-465a-af55-f15810687025.png)
 - Data Merge
 - ![image](https://user-images.githubusercontent.com/104492587/166398534-6a790d7e-2352-4b78-a78e-6838fca05b99.png)
