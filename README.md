@@ -78,8 +78,7 @@ _For more examples, please refer to the [wiki](https://github.com/ZeminL/SkyBXF/
 ## Features
 
 - Graphical User Interface
-- ![image](https://user-images.githubusercontent.com/104492587/166397659-d736663c-e449-4119-bfa0-797b4247c035.png)
-- Questionnaire Implementation
+- - Questionnaire Implementation
 - ![image](https://user-images.githubusercontent.com/104492587/166398504-f9d9a017-1aca-465a-af55-f15810687025.png)
 - Data Merge
 - ![image](https://user-images.githubusercontent.com/104492587/166398534-6a790d7e-2352-4b78-a78e-6838fca05b99.png)
@@ -89,8 +88,8 @@ _For more examples, please refer to the [wiki](https://github.com/ZeminL/SkyBXF/
 <!--  Future projects/implementations in progress -->
 ## Future projects/implementations in progress
 
+- Replaces SkyBXF's framework for configuration and layout, storing layout definitions in JSON files and settings in INI files, completely independent of Papyrus scripts. Makes it more stable in operation and also makes it easy to backup and share settings or edit them outside of the game.
 - Recording and exporting reaction times of button presses.
-- Triggering trial ends by either a time limit and/or collecting an item.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
