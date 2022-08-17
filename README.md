@@ -49,7 +49,7 @@ At the same time, researchers with more advanced coding skills and who wish to d
 This is a simple example of how to set up a project locally. A detailed step-by-step tutorial for getting a local copy up and running can be found on [the wiki.](https://github.com/ZeminL/SkyBXF/wiki)
 ### Prerequisites
 
-Please install the required software and mods before installing SkyBXF.
+Please install the required software and mods before installing SkyBXF (*Caution advised, there are multiple releases for the software and mods listed below. Please download the exact version we listed below).
 * requirements
 1. SKSE VR 2.0.12 [https://skse.silverlock.org/](https://skse.silverlock.org/)
 2. UIExtensions 1.2.0 [https://www.nexusmods.com/skyrimspecialedition/mods/17561](https://www.nexusmods.com/skyrimspecialedition/mods/17561)
